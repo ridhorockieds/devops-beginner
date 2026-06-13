@@ -51,4 +51,4 @@ jobs:
           ssh -i ~/.ssh/id_rsa \
             -o StrictHostKeyChecking=no \
             ${{ secrets.USER }}@${{ secrets.HOST }} \
-            "kubectl rollout restart deployment/devops-beginner"
+            "sudo kubectl rollout restart deployment/devops-beginner"
