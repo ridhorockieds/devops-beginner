@@ -17,7 +17,7 @@ jobs:
 
       - name: Docker Build
         run: |
-          docker build -t devops-cohort:latest .
+          docker build -t devops-beginner:latest .
 
       - name: Docker Login # login to Docker Hub using Personal Access Token
         run: |
