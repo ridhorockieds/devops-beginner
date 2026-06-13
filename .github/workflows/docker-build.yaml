@@ -11,10 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - shell: bash
-        env:
-          secrets: ${{ secrets }}
-
       # Step 1: Checkout source code
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -25,4 +21,4 @@ jobs:
 
       - name: Docker Login # login to Docker Hub using Personal Access Token
         run: |
-          docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+          docker login -u "${{ secrets.DOCKER_USERNAME }}" -p "${{ secrets.DOCKER_PASSWORD }}"
